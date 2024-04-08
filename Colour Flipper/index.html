@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PKs Colour Flipper</title>
+
+    <style>
+      #red {
+        background-color: red;
+      }
+      #blue {
+        background-color: blue;
+      }
+      #green {
+        background-color: green;
+      }
+
+      body {
+        text-align: center;
+      }
+
+      button {
+        border-radius: 32.1%;
+        width: 250px;
+        height: 90px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Colour Flipper</h3>
+    <button id="red" onClick="setColor('red')">Red</button>
+    <button id="blue" onClick="setColor('blue')">Blue</button>
+    <button id="green" onClick="setColor('green')">Green</button>
+    <button id="random" onClick="randomColor()">Random</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
