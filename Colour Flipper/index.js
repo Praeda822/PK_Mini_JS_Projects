@@ -1,16 +1,13 @@
 "use strict";
 
-const body = document.getElementsByTagName("body")[0];
+const body = document.body;
 
-function setColor(element) {
-  body.style.backgroundColor = element;
-}
-
-function randomColor() {
-  const red = Math.round(Math.random() * 255);
-  const blue = Math.round(Math.random() * 255);
-  const green = Math.round(Math.random() * 255);
-
-  const color = `rgb(${red}, ${blue}, ${green})`;
+const setColor = (color) => {
   body.style.backgroundColor = color;
-}
+};
+
+const randomColor = () => {
+  const getRandomValue = () => Math.floor(Math.random() * 256);
+  const color = `rgb(${getRandomValue()}, ${getRandomValue()}, ${getRandomValue()})`;
+  setColor(color);
+};
