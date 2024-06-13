@@ -15,16 +15,16 @@ const quotes = [
 
 let usedQuotes = [];
 
-function generateQuote() {
+const generateQuote = () => {
   if (usedQuotes.length === quotes.length) {
-    usedQuotesIndices = [];
+    usedQuotes = [];
   }
 
-  let randomIndex = Math.floor(Math.random() * quotes.length);
-  while (usedQuotes.includes(randomIndex)) {
+  let randomIndex;
+  do {
     randomIndex = Math.floor(Math.random() * quotes.length);
-  }
+  } while (usedQuotes.includes(randomIndex));
 
   usedQuotes.push(randomIndex);
   document.getElementById("quote").textContent = quotes[randomIndex];
-}
+};
